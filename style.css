@@ -1,0 +1,196 @@
+
+/*start global*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing : border-box  ;
+}
+
+html{
+    font-size: 10px;
+    font-family: 'Roboto' , sans-serif;
+    color: #eee;
+
+}
+body{
+    width: 100%;
+    height: 100%;
+    background: url("images/bg.jpg") no-repeat center fixed ;
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+    color: #eee;
+}
+p{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+img{
+    width: 100%;
+}
+/* end global */
+
+/*start reusable*/
+
+/* end reusable */
+
+
+/*start header*/
+header{
+    width: 100%;
+    height: 100vh;
+
+}
+.top-nav{
+    width:100%;
+    height: 100vh;
+    position: fixed;
+    top: -100vh;
+    background-color: rgb(24, 21, 21);
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    transition: all 650ms cubic-bezier(1,0,0,1);
+    z-index: 50;
+}
+
+.nav-list{
+    list-style: none;
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    margin: 0 2rem;
+}
+
+.nav-link{
+        font-family: 'Dancing Script',cursive, sans-serif;
+        font-size: 5rem;
+        padding: 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus{
+    display: flex;
+    background: linear-gradient(to top,#4f4f5e,#565491);
+    background-clip: initial;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.top-nav.open{
+    top: 0;
+    border-radius: initial;
+}
+
+.menu-toggler{
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    width: 5rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1500;
+    transition: transform 650ms ease-out;
+}
+
+.menu-toggler.opem{
+    transform: rotate(-45deg);
+}
+
+.bar{
+    background: linear-gradient(to top, #ff9900, #3299bb);
+    width: 100%;
+    height: 4px;
+    border-radius: .8rem;
+}
+
+.bar.half{
+    width: 50%;
+}
+
+.bar.start{
+    transform-origin: right ;
+    transition: transform 650ms cubic-bezier(0.54,-0.81,0.57,0.57);
+}
+.open .bar .start{
+    transform: rotate(-450deg) translateX(.8rem);
+}
+.bar.end{
+    align-self: flex-end;
+    transform-origin: left;
+    transition: transform 650ms cubic-bezier(0.54, -0.81,0.57,0.57);
+}
+.open .bar .end{
+    transform: rotate(-450deg) translateX(-0.8rem);
+}
+
+.landing-text{
+    width: 100%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.landing-text h1{
+    font-size: 20rem;
+    font-family: 'Dancing Script',cursive, sans-serif;
+    background: linear-gradient(to top,#e0d2d2,#7a5454);
+    background-clip: initial;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 1rem;
+    user-select: none;
+}
+
+.landing-text h4{
+    font-size: 2rem;
+    font-weight: 300;
+    user-select: none;
+}
+/* end  header */
+
+
+/*start about*/
+.about .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.about-heading{
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0;
+    margin-bottom: 6rem;
+}
+
+.about-heading h1{
+    font-size: 10rem;
+    opacity: .4;
+}
+
+.about-heading h6{
+    font-size: 2rem;
+    font-weight: 300;
+}
+/* end about */
+
+/*start services*/
+
+/* end services */
+
+/*start portfolio*/
+
+/* end  portfolio */
