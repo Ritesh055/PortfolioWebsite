@@ -32,7 +32,24 @@ img{
 /* end global */
 
 /*start reusable*/
+.container{
+    width: 90%;
+    height: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    position: relative;
+}
 
+.section-heading{
+    text-align: center;
+    margin-bottom: 10rem;
+    margin-top: 4rem;
+}
+
+.section-heading h1{
+    font-size: 4rem;
+    color:  #999999;
+}
 /* end reusable */
 
 
@@ -192,7 +209,6 @@ li{
 
 .about-details{
     flex:1;
-    margin-right: 4rem;
 }
 
 .social-media{
@@ -201,7 +217,19 @@ li{
 
 .social-media i{
     font-size: 5rem;
-    transition: color 650ms;
+    transition: color 400ms;
+}
+
+.fa-facebook-square:hover{
+    color: #4267b2;
+}
+
+.fa-google:hover{
+    color: #db4437;
+}
+
+.fa-github-square:hover{
+    color: #211f1f;
 }
 /* end about */
 
