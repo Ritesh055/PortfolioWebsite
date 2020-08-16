@@ -97,11 +97,11 @@ li{
     justify-content: space-between;
     cursor: pointer;
     z-index: 1500;
-    transition: transform 650ms ease-out;
+    transition: transform 650ms ease-in-out;
 }
 
 .menu-toggler.open{
-    transform: rotate(-45deg);
+    transform: rotate(-450deg);
 }
 
 .bar{
@@ -183,6 +183,25 @@ li{
 .about-heading h6{
     font-size: 2rem;
     font-weight: 300;
+}
+
+.profile-img{
+    flex: 1;
+    margin-right: 5rem;
+}
+
+.about-details{
+    flex:1;
+    margin-right: 4rem;
+}
+
+.social-media{
+    margin-top: 5rem;
+}
+
+.social-media i{
+    font-size: 5rem;
+    transition: color 650ms;
 }
 /* end about */
 
