@@ -42,7 +42,7 @@ section{
     max-width: 120rem;
     margin: 0 auto;
     margin-top: 7rem;
-    margin-bottom: 7rem: 
+    margin-bottom: 7rem; 
     position: relative;
 }
 
@@ -137,7 +137,8 @@ li{
         padding: 1rem;
 }
 
-.nav-link:hover .nav-link:focus{
+.nav-link:hover,
+.nav-link:focus{
     display: flex;
     background: linear-gradient(to top,#4f4f5e,#565491);
     background-clip: initial;
@@ -161,11 +162,11 @@ li{
     justify-content: space-between;
     cursor: pointer;
     z-index: 1500;
-    transition: transform 650ms ease-in-out;
+    transition: transform 650ms ease-out;
 }
 
 .menu-toggler.open{
-    transform: rotate(-450deg);
+    transform: rotate(-45deg);
 }
 
 .bar{
@@ -183,7 +184,7 @@ li{
     transform-origin: right ;
     transition: transform 650ms cubic-bezier(0.54,-0.81,0.57,0.57);
 }
-.open .bar .start{
+.bar.start .open{
     transform: rotate(-450deg) translateX(0.8rem);
 }
 .bar.end{
@@ -191,7 +192,7 @@ li{
     transform-origin: left;
     transition: transform 650ms cubic-bezier(0.54, -0.81,0.57,0.57);
 }
-.open .bar .end{
+.bar.end .open{
     transform: rotate(-450deg) translateX(-0.8rem);
 }
 
@@ -399,4 +400,118 @@ li{
     position: relative;
     border-bottom: 1px solid rgba(255,255,255,0.3);
 }
+.timeline .date:last-of-type{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;;
+}
+
+.timeline .date::before,
+.timeline .date::after{
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline .date::before{
+    content: attr(data-date);
+    left:-20rem;
+    text-align: right;
+    min-width: 12rem;
+    font-size: 1.5rem;
+}
+
+.timeline .date::after{
+    content: '';
+    box-shadow: 0 0 0 4px #eee;
+    border-radius: 100%;
+    left: -7.2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: black;
+}
 /* end timeline*/
+
+/*start contact */
+.contact{
+    background-color: none;
+}
+
+form{
+    width: 70%;
+    margin: 0 auto;
+}
+
+form label{
+    font-size: 1.7rem;
+}
+
+input, select, textarea{
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 5px;
+    border: none;
+    outline-color: black;
+}
+
+.submit{
+    width: initial;
+    background-color: #44445c;
+    color: #eee;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: color 650ms;
+}
+
+.submit:hover{
+    color: black;
+    background-color: white;;
+}
+
+/*end contact */
+
+/*start footer */
+.copyright{
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.up{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: #eee;
+    top: -2.5rem;
+    right: 5rem;
+    border-radius: 100%;
+    display: flex;
+    animation: pulse 2s infinite;
+}
+
+.up i{
+    color: black;
+    font-size: 2rem;
+    margin: auto;
+}
+
+.copyright p{
+    font-size: 1.4rem;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0 0 0 0 rgba(255,255,255,0.99);
+    }
+    70%{
+        box-shadow: 0 0 0 2rem rgba(255,255,255,0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(255,255,255,0);
+    }
+}
+/*end footer */
