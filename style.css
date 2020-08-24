@@ -31,7 +31,7 @@ img{
 }
 
 section{
-    padding: 6rem;;
+    padding: 6rem 0;
 }
 /* end global */
 
@@ -401,6 +401,7 @@ li{
     border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 .timeline .date:last-of-type{
+    margin-top: 2rem;
     padding-bottom: 0;
     margin-bottom: 0;
     border: none;;
@@ -491,6 +492,7 @@ input, select, textarea{
     border-radius: 100%;
     display: flex;
     animation: pulse 2s infinite;
+    cursor: pointer;
 }
 
 .up i{
@@ -502,7 +504,9 @@ input, select, textarea{
 .copyright p{
     font-size: 1.4rem;
 }
+/*end footer */
 
+/* start animation*/
 @keyframes pulse{
     0%{
         box-shadow: 0 0 0 0 rgba(255,255,255,0.99);
@@ -514,4 +518,134 @@ input, select, textarea{
         box-shadow: 0 0 0 0 rgba(255,255,255,0);
     }
 }
-/*end footer */
+
+/* end animation */
+
+/* media queries */
+
+@media screen and (max-width: 768px){
+    /* setting a different body background wrt to the screen-size
+    body{
+    background: url("images/bg2.jpg") no-repeat center fixed ;
+    background-size: cover;
+    }
+   */ 
+    .landing-text h1{
+    font-size: 12rem;
+    }
+
+    .landing-text h4{
+        font-size: 1.5rem;
+    }
+
+    .nav-list{
+        flex-direction: column;
+    }
+
+    li{
+        margin: 2rem 0;
+    }
+
+    .nav-link{
+        font-size: 4.5rem;
+    }
+
+    .about-heading h1{
+        font-size: 8rem;
+    }
+
+    .section-heading h1{
+        font-size: 3rem;
+    }
+
+    .about-details .nav-list{
+        flex-direction: initial;
+    }
+
+    .about-details li{
+        margin: 0 2rem;
+    }
+
+    .icon-container{
+        height: 7rem;
+        width: 7rem;
+    }
+
+    .icon-container i{
+        font-size: 4rem;;
+    }
+
+    .timeline ul{
+        margin: 0 0 0 auto;
+    }
+
+    .timeline .date::before{
+        left: -15rem;
+    }
+
+    .timeline .date::after{
+        left: -5.1rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    .menu-toggler{
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .landing-text h1{
+        font-size: 8rem;
+    } 
+
+    .landing-text h4{
+        font-size: 1.2rem;
+    }
+
+    .nav-link{
+        font-size: 3.5rem;
+    }
+
+    .about .container{
+        flex-direction: column;
+    }
+
+    .profile-img{
+        margin: 0 0 7rem 0;
+    }
+
+    .about-details p{
+        text-align: center;
+    }
+
+    .portfolio-item{
+        flex-direction: column;
+    }
+
+    .portfolio-img{
+        margin: 0 0 3rem 0;
+        order: 1;
+    }
+
+    .portfolio-description{
+        margin: 0;
+        order:2;
+    }
+
+    .timeline p{
+        font-size: 1.5rem;
+    }
+
+    .timeline .date::before{
+        font-size: 1.3rem;
+    }
+
+    form{
+        width: 100%;
+    }
+
+    .up{
+        right: 2rem;
+    }
+}
